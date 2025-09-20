@@ -33,7 +33,8 @@ Buscador de CEP simples e eficiente para consulta de endereços.
 - **Tecnologia:** JavaScript
 - **Status:** ✅ Concluído
 
-### 🔐 [Gerador de Senhas](https://github.com/deusbr/GeradorSenha) 
+### 🔐 [Gerador de Senhas](https://github.com/deusbr/GeradorSenha)
+
 Gerador de senhas seguras com diferentes níveis de complexidade.
 - **Tecnologia:** JavaScript
 - **Status:** ✅ Concluído
@@ -64,7 +65,7 @@ Aplicação para organização e controle de tarefas diárias.
   <a href="https://linkedin.com/in/emersonalmeida" target="_blank">
     <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="mailto:emerson.dev@email.com" target="_blank">
+  <a href="mailto:emerson.c.j.almeida@outlook.com" target="_blank">
     <img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
   </a>
   <a href="https://github.com/deusbr" target="_blank">
