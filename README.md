@@ -34,7 +34,6 @@ Buscador de CEP simples e eficiente para consulta de endereços.
 - **Status:** ✅ Concluído
 
 ### 🔐 [Gerador de Senhas](https://github.com/deusbr/GeradorSenha)
-
 Gerador de senhas seguras com diferentes níveis de complexidade.
 - **Tecnologia:** JavaScript
 - **Status:** ✅ Concluído
@@ -62,7 +61,7 @@ Aplicação para organização e controle de tarefas diárias.
 ## 📫 Como me encontrar
 
 <div align="center">
-  <a href="https://linkedin.com/in/emersonalmeida" target="_blank">
+  <a href="https://www.linkedin.com/in/emerson-concei%C3%A7%C3%A3o-de-jesus-almeida-g0d/" target="_blank">
     <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="mailto:emerson.c.j.almeida@outlook.com" target="_blank">
