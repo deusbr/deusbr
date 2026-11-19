@@ -22,6 +22,7 @@
 | [**local-tool-bench**](https://github.com/deusbr/local-tool-bench) | Tool-calling benchmark suite & JSON schema repair micro-proxy for local GGUF/Ollama models | Node.js, MCP, llama.cpp/Ollama | MIT |
 | [**repo-release-guard**](https://github.com/deusbr/repo-release-guard) | Portable AI Skill + stdio MCP server for `git worktree` task isolation & pre-release hygiene audits | Node.js, Git, MCP, SKILL.md | MIT |
 | [**ai-photo-studio**](https://github.com/deusbr/ai-photo-studio) | 7-role AI photo editing studio (Skill + MCP + Local Web UI) for Codex, Gemini CLI & Claude | Node.js, MCP stdio, SKILL.md, HTTP | MIT |
+| [**mcp-studio**](https://github.com/deusbr/mcp-studio) | Zero-dependency MCP generator & workbench turning OpenAPI, CLIs, and Windows apps into MCP servers | Node.js, MCP stdio, OpenAPI, COM | MIT |
 
 ```mermaid
 flowchart LR
@@ -32,6 +33,7 @@ flowchart LR
   Bench["local-tool-bench (GGUF Tool-Call Proxy)"]
   Guard["repo-release-guard (Worktree + Release Audit)"]
   Studio["ai-photo-studio (7-Role Crew + Web Studio)"]
+  McpStudio["mcp-studio (App-to-MCP Generator)"]
 
   Installer --> Clients
   Doctor --> Clients
@@ -39,6 +41,7 @@ flowchart LR
   Bench --> Lume
   Guard --> Clients
   Studio --> Clients
+  McpStudio --> Clients
 ```
 
 ---
