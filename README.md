@@ -1,66 +1,117 @@
+<div align="center">
+
 # Emerson Almeida (`@deusbr`)
 
-**Full Stack & Local AI Engineer** — Building privacy-first desktop assistants, **Model Context Protocol (MCP)** developer tooling, and reproducible local LLM workflows from Brazil.
+### Full Stack & Local AI Engineer · Model Context Protocol (MCP) Tooling · Brazil
+
+[![Open to Work & Consulting](https://img.shields.io/badge/Status-Available_for_Consulting_%26_Collaborations-10b981?style=flat-square)](https://github.com/deusbr)
+[![GitHub](https://img.shields.io/badge/GitHub-@deusbr-181717?style=flat-square&logo=github)](https://github.com/deusbr)
+[![Focus](https://img.shields.io/badge/Focus-Local_AI_%C2%B7_MCP_%C2%B7_Full_Stack-2563eb?style=flat-square)](#-focus-areas)
+[![License](https://img.shields.io/badge/Open_Source-MIT_Licensed-6366f1?style=flat-square)](#-flagship-open-source-suite)
+
+*Designing zero-dependency developer tooling, privacy-first desktop AI systems, and cross-client **Model Context Protocol (MCP)** infrastructure.*
+
+[Focus Areas](#-focus-areas) · [Flagship Suite](#-flagship-open-source-suite) · [Ecosystem Architecture](#-ecosystem-architecture) · [Engineering Standards](#-engineering-standards) · [Tech Stack](#-tech-stack) · [GitHub Analytics](#-github-analytics)
+
+</div>
 
 ---
 
 ## Focus Areas
 
-- **Model Context Protocol (MCP) Tooling:** Drift-safe client configuration installers, diagnostics, and stdio JSON-RPC 2.0 servers for **Claude Desktop**, **Claude Code**, **Cursor**, **Codex**, and **OpenBot**.
-- **Local & Privacy-First AI:** Desktop inference with `llama.cpp` (CPU/Vulkan GGUF), local `Whisper` transcription, SQLite per-profile memory, and Ed25519-verified releases.
-- **Full Stack & Automation:** Node.js, TypeScript, Electron, Python/FastAPI, and industrial/developer workflow automation.
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>MCP Tooling &amp; Infrastructure</h3>
+      <p>Zero-dependency generators, drift-safe SHA-256 config installers, handshake diagnostics, and <code>stdio</code> JSON-RPC 2.0 servers compatible with <strong>Claude Desktop</strong>, <strong>Claude Code</strong>, <strong>Codex</strong>, <strong>Gemini CLI</strong>, <strong>Cursor</strong>, and <strong>OpenBot</strong>.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>Local &amp; Privacy-First AI</h3>
+      <p>Offline-capable desktop inference with <code>llama.cpp</code> (CPU/Vulkan GGUF), local <code>Whisper</code> transcription, JSON Schema repair proxies for small models, SQLite memory, and Ed25519-signed releases.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>Full Stack &amp; Agentic Studios</h3>
+      <p>End-to-end developer workbenches combining portable <code>SKILL.md</code> workflows, native MCP servers, and local web UIs in Node.js, TypeScript, Electron, and Python/FastAPI.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Featured Open-Source Projects
+## Flagship Open-Source Suite
 
-| Project | Role | Stack | License |
+### AI Studios & Desktop Assistants
+
+| Project | Summary | Core Stack | CI & Release |
 | :--- | :--- | :--- | :--- |
-| [**lume**](https://github.com/deusbr/lume) | Open-source Windows desktop AI assistant with bidirectional MCP, local Whisper & `llama.cpp` | Electron, Node.js 24, MCP, SQLite | MIT |
-| [**mcp-client-installer**](https://github.com/deusbr/mcp-client-installer) | Zero-dependency, SHA-256 drift-safe atomic MCP config installer & rollback library | Node.js, JSON/TOML, SHA-256 | MIT |
-| [**mcp-doctor**](https://github.com/deusbr/mcp-doctor) | CLI & AI Skill to audit MCP configs, Windows wrappers, stdio handshakes, and token bloat | Node.js, MCP stdio, SKILL.md | MIT |
-| [**local-tool-bench**](https://github.com/deusbr/local-tool-bench) | Tool-calling benchmark suite & JSON schema repair micro-proxy for local GGUF/Ollama models | Node.js, MCP, llama.cpp/Ollama | MIT |
-| [**repo-release-guard**](https://github.com/deusbr/repo-release-guard) | Portable AI Skill + stdio MCP server for `git worktree` task isolation & pre-release hygiene audits | Node.js, Git, MCP, SKILL.md | MIT |
-| [**ai-photo-studio**](https://github.com/deusbr/ai-photo-studio) | 7-role AI photo editing studio (Skill + MCP + Local Web UI) for Codex, Gemini CLI & Claude | Node.js, MCP stdio, SKILL.md, HTTP | MIT |
-| [**mcp-studio**](https://github.com/deusbr/mcp-studio) | Zero-dependency MCP generator & workbench turning OpenAPI, CLIs, and Windows apps into MCP servers | Node.js, MCP stdio, OpenAPI, COM | MIT |
+| [**`mcp-studio`**](https://github.com/deusbr/mcp-studio#readme) | Zero-dependency workbench (CLI + MCP Server + Local Web UI + `SKILL.md`) turning OpenAPI specs, local CLIs, and Windows desktop apps without native MCP support into tested MCP servers | `Node.js >=18` · `MCP stdio` · `OpenAPI` · `COM` · `MIT` | [![CI](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-studio?color=2563eb&label=release)](https://github.com/deusbr/mcp-studio/releases) |
+| [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 7-role full-crew AI photo editing studio (portable `SKILL.md` + `stdio` MCP server + Local Web Studio with Before/After comparator) built for Codex, Gemini CLI, and Claude subscriptions | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
+| [**`lume`**](https://github.com/deusbr/lume#readme) | Open-source Windows desktop AI assistant with bidirectional MCP (`@modelcontextprotocol/client`), local `Whisper` CPU transcription, `llama.cpp` GGUF inference, SQLite memory & Ed25519 updates | `Electron` · `Node.js 24` · `MCP` · `SQLite` · `MIT` | [![CI](https://github.com/deusbr/lume/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lume/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lume?color=2563eb&label=release)](https://github.com/deusbr/lume/releases) |
+
+### MCP Infrastructure, Diagnostics & Release Quality
+
+| Project | Summary | Core Stack | CI & Release |
+| :--- | :--- | :--- | :--- |
+| [**`mcp-doctor`**](https://github.com/deusbr/mcp-doctor#readme) | Zero-dependency CLI, library, and portable `SKILL.md` auditing MCP configs across Claude Desktop, Claude Code, Cursor & Codex for broken paths, Windows wrappers, secret leaks, live handshakes & token bloat | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `MIT` | [![CI](https://github.com/deusbr/mcp-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-doctor/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-doctor?color=2563eb&label=release)](https://github.com/deusbr/mcp-doctor/releases) |
+| [**`mcp-client-installer`**](https://github.com/deusbr/mcp-client-installer#readme) | Zero-dependency, SHA-256 drift-safe atomic MCP config installer and rollback library for JSON and TOML MCP clients | `Node.js >=18` · `JSON/TOML` · `SHA-256` · `MIT` | [![CI](https://github.com/deusbr/mcp-client-installer/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-client-installer/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-client-installer?color=2563eb&label=release)](https://github.com/deusbr/mcp-client-installer/releases) |
+| [**`local-tool-bench`**](https://github.com/deusbr/local-tool-bench#readme) | Zero-dependency tool-calling benchmark suite and JSON Schema repair micro-proxy for local GGUF (`llama.cpp`) and Ollama models | `Node.js >=18` · `MCP` · `llama.cpp` · `Ollama` · `MIT` | [![CI](https://github.com/deusbr/local-tool-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/local-tool-bench/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/local-tool-bench?color=2563eb&label=release)](https://github.com/deusbr/local-tool-bench/releases) |
+| [**`repo-release-guard`**](https://github.com/deusbr/repo-release-guard#readme) | Portable AI Skill (`SKILL.md`) and zero-dependency `stdio` MCP server for `git worktree` inspection, pre-release hygiene audits, secret scanning & SemVer tag readiness | `Node.js >=18` · `Git` · `MCP stdio` · `SKILL.md` · `MIT` | [![CI](https://github.com/deusbr/repo-release-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/repo-release-guard/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/repo-release-guard?color=2563eb&label=release)](https://github.com/deusbr/repo-release-guard/releases) |
+
+---
+
+## Ecosystem Architecture
 
 ```mermaid
 flowchart LR
-  Clients["Claude Desktop / Claude Code / Codex / Gemini CLI / OpenBot"]
-  Installer["mcp-client-installer (Atomic + SHA-256)"]
-  Doctor["mcp-doctor (Config + Token Audit)"]
-  Lume["Lume Desktop (Local AI + MCP Client/Server)"]
-  Bench["local-tool-bench (GGUF Tool-Call Proxy)"]
-  Guard["repo-release-guard (Worktree + Release Audit)"]
-  Studio["ai-photo-studio (7-Role Crew + Web Studio)"]
-  McpStudio["mcp-studio (App-to-MCP Generator)"]
+  Clients["AI Clients: Claude Desktop · Claude Code · Codex · Gemini CLI · Cursor · OpenBot"]
+  McpStudio["mcp-studio (OpenAPI / CLI / Windows COM → MCP)"]
+  PhotoStudio["ai-photo-studio (7-Role Crew + Local Web UI)"]
+  Installer["mcp-client-installer (Atomic JSON/TOML + SHA-256)"]
+  Doctor["mcp-doctor (Config, Handshake & Token Audit)"]
+  Guard["repo-release-guard (Worktree & Release Hygiene)"]
+  Lume["lume (Electron Desktop AI + Local Whisper & llama.cpp)"]
+  Bench["local-tool-bench (GGUF Tool-Call Benchmark & Repair Proxy)"]
 
-  Installer --> Clients
-  Doctor --> Clients
-  Lume --> Clients
-  Bench --> Lume
-  Guard --> Clients
-  Studio --> Clients
-  McpStudio --> Clients
+  McpStudio -->|"generates & probes"| Clients
+  PhotoStudio -->|"Skill + MCP stdio"| Clients
+  Installer -->|"writes & rolls back"| Clients
+  Doctor -->|"audits & probes"| Clients
+  Guard -->|"verifies releases"| Clients
+  Lume -->|"connects to"| Clients
+  Bench -->|"repairs tool JSON"| Lume
 ```
+
+---
+
+## Engineering Standards
+
+- **Zero-Dependency Core Philosophy:** Core MCP servers, installers, diagnostics, and studios run on pure Node.js standard libraries (`node:fs`, `node:http`, `node:crypto`, `node:child_process`, `node:test`) to eliminate supply-chain bloat and startup overhead.
+- **Cross-Platform CI Matrix:** Every flagship repository runs automated GitHub Actions verification across `ubuntu-latest`, `windows-latest`, and `macos-latest` on Node.js `18`, `20`, `22`, and `24`.
+- **Safe Automation by Default:** Atomic file swaps with SHA-256 drift detection, `execFile` without shell interpolation (`shell: false`), strict secret hygiene checks prior to release, and portable `SKILL.md` specifications.
 
 ---
 
 ## Tech Stack
 
-- **Languages & Runtimes:** JavaScript (Node.js 24), TypeScript, Python
-- **AI & Protocols:** Model Context Protocol (`@modelcontextprotocol/client`, stdio JSON-RPC 2.0), `llama.cpp` (GGUF), Whisper, Agent Skills (`SKILL.md`)
-- **Apps & Data:** Electron, React, FastAPI, SQLite, PostgreSQL, Playwright, GitHub Actions CI
+| Layer | Technologies |
+| :--- | :--- |
+| **Languages & Runtimes** | JavaScript (`Node.js 18–24`), TypeScript, Python |
+| **AI & Agent Protocols** | Model Context Protocol (`stdio` JSON-RPC 2.0, `@modelcontextprotocol/client`), Agent Skills (`SKILL.md`), `llama.cpp` (GGUF), Ollama, `Whisper` |
+| **Applications & Data** | Electron, React, Vite, FastAPI, SQLite, Supabase / PostgreSQL |
+| **Quality & Delivery** | `node:test`, GitHub Actions CI/CD, Playwright, SemVer Releases, MIT Licensing |
 
 ---
 
-## GitHub Stats
+## GitHub Analytics
 
 <div align="center">
-  <img height="175" src="https://github-readme-stats.vercel.app/api?username=deusbr&show_icons=true&theme=dark&include_all_commits=true" alt="GitHub Stats" />
-  <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=deusbr&layout=compact&langs_count=6&theme=dark" alt="Top Languages" />
+  <img height="175" src="https://github-readme-stats.vercel.app/api?username=deusbr&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true" alt="GitHub Stats for @deusbr" />
+  <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=deusbr&layout=compact&langs_count=6&theme=github_dark&hide_border=true" alt="Top Languages for @deusbr" />
 </div>
 
 ---
 
-- GitHub: [github.com/deusbr](https://github.com/deusbr)
+<div align="center">
+  <strong>Open to AI/MCP engineering collaborations, developer tooling work, and open-source contributions.</strong><br />
+  <sub>Based in Brazil (UTC-3) · Reach out via <a href="https://github.com/deusbr">GitHub (@deusbr)</a> or repository issues &amp; discussions.</sub>
+</div>
