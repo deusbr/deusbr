@@ -21,21 +21,24 @@
 | [**mcp-doctor**](https://github.com/deusbr/mcp-doctor) | CLI & AI Skill to audit MCP configs, Windows wrappers, stdio handshakes, and token bloat | Node.js, MCP stdio, SKILL.md | MIT |
 | [**local-tool-bench**](https://github.com/deusbr/local-tool-bench) | Tool-calling benchmark suite & JSON schema repair micro-proxy for local GGUF/Ollama models | Node.js, MCP, llama.cpp/Ollama | MIT |
 | [**repo-release-guard**](https://github.com/deusbr/repo-release-guard) | Portable AI Skill + stdio MCP server for `git worktree` task isolation & pre-release hygiene audits | Node.js, Git, MCP, SKILL.md | MIT |
+| [**ai-photo-studio**](https://github.com/deusbr/ai-photo-studio) | 7-role AI photo editing studio (Skill + MCP + Local Web UI) for Codex, Gemini CLI & Claude | Node.js, MCP stdio, SKILL.md, HTTP | MIT |
 
 ```mermaid
 flowchart LR
-  Clients["Claude Desktop / Claude Code / Cursor / Codex / OpenBot"]
+  Clients["Claude Desktop / Claude Code / Codex / Gemini CLI / OpenBot"]
   Installer["mcp-client-installer (Atomic + SHA-256)"]
   Doctor["mcp-doctor (Config + Token Audit)"]
   Lume["Lume Desktop (Local AI + MCP Client/Server)"]
   Bench["local-tool-bench (GGUF Tool-Call Proxy)"]
   Guard["repo-release-guard (Worktree + Release Audit)"]
+  Studio["ai-photo-studio (7-Role Crew + Web Studio)"]
 
   Installer --> Clients
   Doctor --> Clients
   Lume --> Clients
   Bench --> Lume
   Guard --> Clients
+  Studio --> Clients
 ```
 
 ---
