@@ -48,10 +48,11 @@
 | [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 7-role full-crew AI photo editing studio (portable `SKILL.md` + `stdio` MCP server + Local Web Studio with Before/After comparator) built for Codex, Gemini CLI, and Claude subscriptions | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
 | [**`lume`**](https://github.com/deusbr/lume#readme) | Open-source Windows desktop AI assistant with bidirectional MCP (`@modelcontextprotocol/client`), local `Whisper` CPU transcription, `llama.cpp` GGUF inference, SQLite memory & Ed25519 updates | `Electron` · `Node.js 24` · `MCP` · `SQLite` · `MIT` | [![CI](https://github.com/deusbr/lume/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lume/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lume?color=2563eb&label=release)](https://github.com/deusbr/lume/releases) |
 
-### MCP Infrastructure, Diagnostics & Release Quality
+### MCP Infrastructure, Diagnostics & Token Optimization
 
 | Project | Summary | Core Stack | CI & Release |
 | :--- | :--- | :--- | :--- |
+| [**`context-slim`**](https://github.com/deusbr/context-slim#readme) | Zero-dependency universal token-saving compressor (CLI + ultra-lean 3-tool `stdio` MCP + `SKILL.md`) with hybrid `repomix`/`rtk` support for code, JSON, logs, CSV & directories | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `MIT` | [![CI](https://github.com/deusbr/context-slim/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/context-slim/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/context-slim?color=2563eb&label=release)](https://github.com/deusbr/context-slim/releases) |
 | [**`mcp-doctor`**](https://github.com/deusbr/mcp-doctor#readme) | Zero-dependency CLI, library, and portable `SKILL.md` auditing MCP configs across Claude Desktop, Claude Code, Cursor & Codex for broken paths, Windows wrappers, secret leaks, live handshakes & token bloat | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `MIT` | [![CI](https://github.com/deusbr/mcp-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-doctor/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-doctor?color=2563eb&label=release)](https://github.com/deusbr/mcp-doctor/releases) |
 | [**`mcp-client-installer`**](https://github.com/deusbr/mcp-client-installer#readme) | Zero-dependency, SHA-256 drift-safe atomic MCP config installer and rollback library for JSON and TOML MCP clients | `Node.js >=18` · `JSON/TOML` · `SHA-256` · `MIT` | [![CI](https://github.com/deusbr/mcp-client-installer/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-client-installer/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-client-installer?color=2563eb&label=release)](https://github.com/deusbr/mcp-client-installer/releases) |
 | [**`local-tool-bench`**](https://github.com/deusbr/local-tool-bench#readme) | Zero-dependency tool-calling benchmark suite and JSON Schema repair micro-proxy for local GGUF (`llama.cpp`) and Ollama models | `Node.js >=18` · `MCP` · `llama.cpp` · `Ollama` · `MIT` | [![CI](https://github.com/deusbr/local-tool-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/local-tool-bench/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/local-tool-bench?color=2563eb&label=release)](https://github.com/deusbr/local-tool-bench/releases) |
@@ -66,6 +67,7 @@ flowchart LR
   Clients["AI Clients: Claude Desktop · Claude Code · Codex · Gemini CLI · Cursor · OpenBot"]
   McpStudio["mcp-studio (OpenAPI / CLI / Windows COM → MCP)"]
   PhotoStudio["ai-photo-studio (7-Role Crew + Local Web UI)"]
+  ContextSlim["context-slim (Token Compressor + 3-Tool MCP)"]
   Installer["mcp-client-installer (Atomic JSON/TOML + SHA-256)"]
   Doctor["mcp-doctor (Config, Handshake & Token Audit)"]
   Guard["repo-release-guard (Worktree & Release Hygiene)"]
@@ -74,6 +76,7 @@ flowchart LR
 
   McpStudio -->|"generates & probes"| Clients
   PhotoStudio -->|"Skill + MCP stdio"| Clients
+  ContextSlim -->|"compresses context"| Clients
   Installer -->|"writes & rolls back"| Clients
   Doctor -->|"audits & probes"| Clients
   Guard -->|"verifies releases"| Clients
