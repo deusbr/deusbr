@@ -30,8 +30,8 @@
       <p>Offline-capable desktop inference with <code>llama.cpp</code> (CPU/Vulkan GGUF), local <code>Whisper</code> transcription, JSON Schema repair proxies for small models, SQLite memory, and Ed25519-signed releases.</p>
     </td>
     <td width="33%" valign="top">
-      <h3>Full Stack &amp; Agentic Studios</h3>
-      <p>End-to-end developer workbenches combining portable <code>SKILL.md</code> workflows, native MCP servers, and local web UIs in Node.js, TypeScript, Electron, and Python/FastAPI.</p>
+      <h3>Full Stack, Porting &amp; Agentic Studios</h3>
+      <p>End-to-end developer workbenches combining portable <code>SKILL.md</code> workflows, native MCP servers, local web UIs, and PC/Xbox-to-Android porting automation (<code>NDK</code>, <code>SDL2</code>, <code>Winlator</code>) in Node.js, TypeScript, and Python.</p>
     </td>
   </tr>
 </table>
@@ -104,6 +104,7 @@ flowchart LR
 | **Languages & Runtimes** | JavaScript (`Node.js 18–24`), TypeScript, Python |
 | **AI & Agent Protocols** | Model Context Protocol (`stdio` JSON-RPC 2.0, `@modelcontextprotocol/client`), Agent Skills (`SKILL.md`), `llama.cpp` (GGUF), Ollama, `Whisper` |
 | **Applications & Data** | Electron, React, Vite, FastAPI, SQLite, Supabase / PostgreSQL |
+| **Porting & Native Targets** | Android NDK, CMake, SDL2, Vulkan / DXVK, Winlator / Box64, Capacitor, Buildozer |
 | **Quality & Delivery** | `node:test`, GitHub Actions CI/CD, Playwright, SemVer Releases, MIT Licensing |
 
 ---
