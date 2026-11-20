@@ -44,6 +44,7 @@
 
 | Project | Summary | Core Stack | CI & Release |
 | :--- | :--- | :--- | :--- |
+| [**`port-forge`**](https://github.com/deusbr/port-forge#readme) | Zero-dependency cross-platform porting studio (CLI + MCP Server + Web UI + `SKILL.md`) for PC apps, Windows `.exe` (`Winlator/Box64/DXVK`) & Xbox 360 `.xex` (`XenonRecomp`) to Android | `Node.js >=18` · `MCP stdio` · `NDK/SDL2` · `Winlator` · `MIT` | [![CI](https://github.com/deusbr/port-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/port-forge/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/port-forge?color=2563eb&label=release)](https://github.com/deusbr/port-forge/releases) |
 | [**`mcp-studio`**](https://github.com/deusbr/mcp-studio#readme) | Zero-dependency workbench (CLI + MCP Server + Local Web UI + `SKILL.md`) turning OpenAPI specs, local CLIs, and Windows desktop apps without native MCP support into tested MCP servers | `Node.js >=18` · `MCP stdio` · `OpenAPI` · `COM` · `MIT` | [![CI](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-studio?color=2563eb&label=release)](https://github.com/deusbr/mcp-studio/releases) |
 | [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 8-agent Essence-Driven AI photo studio (`v3`: Autonomous, Directed & bespoke Multi-Shot Essays with motivated cinematography lighting, screenshot auto-crop & Anti-AI QA) | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
 | [**`lume`**](https://github.com/deusbr/lume#readme) | Open-source Windows desktop AI assistant with bidirectional MCP (`@modelcontextprotocol/client`), local `Whisper` CPU transcription, `llama.cpp` GGUF inference, SQLite memory & Ed25519 updates | `Electron` · `Node.js 24` · `MCP` · `SQLite` · `MIT` | [![CI](https://github.com/deusbr/lume/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lume/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lume?color=2563eb&label=release)](https://github.com/deusbr/lume/releases) |
@@ -65,6 +66,7 @@
 ```mermaid
 flowchart LR
   Clients["AI Clients: Claude Desktop · Claude Code · Codex · Gemini CLI · Cursor · OpenBot"]
+  PortForge["port-forge (PC / Xbox 360 → Android NDK/SDL2/Winlator)"]
   McpStudio["mcp-studio (OpenAPI / CLI / Windows COM → MCP)"]
   PhotoStudio["ai-photo-studio (8-Agent Auto/Directed + Anti-AI QA)"]
   ContextSlim["context-slim (Token Compressor + 3-Tool MCP)"]
@@ -74,6 +76,7 @@ flowchart LR
   Lume["lume (Electron Desktop AI + Local Whisper & llama.cpp)"]
   Bench["local-tool-bench (GGUF Tool-Call Benchmark & Repair Proxy)"]
 
+  PortForge -->|"Skill + MCP + Scaffolds"| Clients
   McpStudio -->|"generates & probes"| Clients
   PhotoStudio -->|"Skill + MCP stdio"| Clients
   ContextSlim -->|"compresses context"| Clients
