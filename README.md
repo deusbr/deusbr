@@ -45,7 +45,7 @@
 | Project | Summary | Core Stack | CI & Release |
 | :--- | :--- | :--- | :--- |
 | [**`mcp-studio`**](https://github.com/deusbr/mcp-studio#readme) | Zero-dependency workbench (CLI + MCP Server + Local Web UI + `SKILL.md`) turning OpenAPI specs, local CLIs, and Windows desktop apps without native MCP support into tested MCP servers | `Node.js >=18` · `MCP stdio` · `OpenAPI` · `COM` · `MIT` | [![CI](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-studio?color=2563eb&label=release)](https://github.com/deusbr/mcp-studio/releases) |
-| [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 7-role full-crew AI photo editing studio (portable `SKILL.md` + `stdio` MCP server + Local Web Studio with Before/After comparator) built for Codex, Gemini CLI, and Claude subscriptions | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
+| [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 8-agent Autonomous & Directed AI photo studio (portable `SKILL.md` + `stdio` MCP server + Local Web Workbench with Anti-AI QA loop & Asset Lineage) built for OpenBot, Codex, Gemini CLI, and Claude | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
 | [**`lume`**](https://github.com/deusbr/lume#readme) | Open-source Windows desktop AI assistant with bidirectional MCP (`@modelcontextprotocol/client`), local `Whisper` CPU transcription, `llama.cpp` GGUF inference, SQLite memory & Ed25519 updates | `Electron` · `Node.js 24` · `MCP` · `SQLite` · `MIT` | [![CI](https://github.com/deusbr/lume/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lume/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lume?color=2563eb&label=release)](https://github.com/deusbr/lume/releases) |
 
 ### MCP Infrastructure, Diagnostics & Token Optimization
@@ -66,7 +66,7 @@
 flowchart LR
   Clients["AI Clients: Claude Desktop · Claude Code · Codex · Gemini CLI · Cursor · OpenBot"]
   McpStudio["mcp-studio (OpenAPI / CLI / Windows COM → MCP)"]
-  PhotoStudio["ai-photo-studio (7-Role Crew + Local Web UI)"]
+  PhotoStudio["ai-photo-studio (8-Agent Auto/Directed + Anti-AI QA)"]
   ContextSlim["context-slim (Token Compressor + 3-Tool MCP)"]
   Installer["mcp-client-installer (Atomic JSON/TOML + SHA-256)"]
   Doctor["mcp-doctor (Config, Handshake & Token Audit)"]
