@@ -46,7 +46,8 @@
 | :--- | :--- | :--- | :--- |
 | [**`port-forge`**](https://github.com/deusbr/port-forge#readme) | Zero-dependency cross-platform porting studio (CLI + MCP Server + Web UI + `SKILL.md`) for PC apps, Windows `.exe` (`Winlator/Box64/DXVK`) & Xbox 360 `.xex` (`XenonRecomp`) to Android | `Node.js >=18` · `MCP stdio` · `NDK/SDL2` · `Winlator` · `MIT` | [![CI](https://github.com/deusbr/port-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/port-forge/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/port-forge?color=2563eb&label=release)](https://github.com/deusbr/port-forge/releases) |
 | [**`mcp-studio`**](https://github.com/deusbr/mcp-studio#readme) | Zero-dependency workbench (CLI + MCP Server + Local Web UI + `SKILL.md`) turning OpenAPI specs, local CLIs, and Windows desktop apps without native MCP support into tested MCP servers | `Node.js >=18` · `MCP stdio` · `OpenAPI` · `COM` · `MIT` | [![CI](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-studio?color=2563eb&label=release)](https://github.com/deusbr/mcp-studio/releases) |
-| [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 8-agent Essence-Driven AI photo studio (`v3`: Autonomous, Directed & bespoke Multi-Shot Essays with motivated cinematography lighting, screenshot auto-crop & Anti-AI QA) | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
+| [**`ui-craft-studio`**](https://github.com/deusbr/ui-craft-studio#readme) | Zero-dependency Anti-AI-Slop UI/UX & Interactive App Design Studio MCP (Mobile + Desktop/PC): scans your codebase first, researches GitHub design skills, compiles `DESIGN.md` + clickable 4-state prototypes & runs deterministic WCAG AA audits | `Node.js >=18` · `MCP stdio` · `DESIGN.md` · `WCAG AA` · `MIT` | [![CI](https://github.com/deusbr/ui-craft-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ui-craft-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ui-craft-studio?color=2563eb&label=release)](https://github.com/deusbr/ui-craft-studio/releases) |
+| [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 8-agent Essence-Driven AI photo studio (`v4`: hybrid craft research, posing geometry, cinema/trailer & beauty presets, optical filters, editorial makeup, 5 prompt engines & Anti-AI QA) | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
 | [**`lume`**](https://github.com/deusbr/lume#readme) | Open-source Windows desktop AI assistant with bidirectional MCP (`@modelcontextprotocol/client`), local `Whisper` CPU transcription, `llama.cpp` GGUF inference, SQLite memory & Ed25519 updates | `Electron` · `Node.js 24` · `MCP` · `SQLite` · `MIT` | [![CI](https://github.com/deusbr/lume/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lume/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lume?color=2563eb&label=release)](https://github.com/deusbr/lume/releases) |
 
 ### MCP Infrastructure, Diagnostics & Token Optimization
@@ -68,7 +69,8 @@ flowchart LR
   Clients["AI Clients: Claude Desktop · Claude Code · Codex · Gemini CLI · Cursor · OpenBot"]
   PortForge["port-forge (PC / Xbox 360 → Android NDK/SDL2/Winlator)"]
   McpStudio["mcp-studio (OpenAPI / CLI / Windows COM → MCP)"]
-  PhotoStudio["ai-photo-studio (8-Agent Auto/Directed + Anti-AI QA)"]
+  UiCraft["ui-craft-studio (Codebase-First Anti-Slop UI/UX + DESIGN.md)"]
+  PhotoStudio["ai-photo-studio v4 (Craft Research + 8-Agent Anti-AI QA)"]
   ContextSlim["context-slim (Token Compressor + 3-Tool MCP)"]
   Installer["mcp-client-installer (Atomic JSON/TOML + SHA-256)"]
   Doctor["mcp-doctor (Config, Handshake & Token Audit)"]
@@ -78,6 +80,7 @@ flowchart LR
 
   PortForge -->|"Skill + MCP + Scaffolds"| Clients
   McpStudio -->|"generates & probes"| Clients
+  UiCraft -->|"DESIGN.md + Interactive UI"| Clients
   PhotoStudio -->|"Skill + MCP stdio"| Clients
   ContextSlim -->|"compresses context"| Clients
   Installer -->|"writes & rolls back"| Clients
