@@ -47,6 +47,8 @@
 | [**`port-forge`**](https://github.com/deusbr/port-forge#readme) | Zero-dependency cross-platform porting studio (CLI + MCP Server + Web UI + `SKILL.md`) for PC apps, Windows `.exe` (`Winlator/Box64/DXVK`) & Xbox 360 `.xex` (`XenonRecomp`) to Android | `Node.js >=18` · `MCP stdio` · `NDK/SDL2` · `Winlator` · `MIT` | [![CI](https://github.com/deusbr/port-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/port-forge/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/port-forge?color=2563eb&label=release)](https://github.com/deusbr/port-forge/releases) |
 | [**`mcp-studio`**](https://github.com/deusbr/mcp-studio#readme) | Zero-dependency workbench (CLI + MCP Server + Local Web UI + `SKILL.md`) turning OpenAPI specs, local CLIs, and Windows desktop apps without native MCP support into tested MCP servers | `Node.js >=18` · `MCP stdio` · `OpenAPI` · `COM` · `MIT` | [![CI](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-studio?color=2563eb&label=release)](https://github.com/deusbr/mcp-studio/releases) |
 | [**`ui-craft-studio`**](https://github.com/deusbr/ui-craft-studio#readme) | Zero-dependency Anti-AI-Slop UI/UX & Interactive App Design Studio MCP (Mobile + Desktop/PC): scans your codebase first, researches GitHub design skills, compiles `DESIGN.md` + clickable 4-state prototypes & runs deterministic WCAG AA audits | `Node.js >=18` · `MCP stdio` · `DESIGN.md` · `WCAG AA` · `MIT` | [![CI](https://github.com/deusbr/ui-craft-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ui-craft-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ui-craft-studio?color=2563eb&label=release)](https://github.com/deusbr/ui-craft-studio/releases) |
+| [**`meshforge-mcp`**](https://github.com/deusbr/meshforge-mcp#readme) | Zero-dependency, zero-API-key Text/Image-to-3D CLI, pure-code SDF/Marching-Tetrahedra & 2D-EDT GLB generator, Three.js inspector, and 7-tool `stdio` MCP server | `Node.js >=18` · `GLB/glTF` · `SDF` · `MCP stdio` · `MIT` | [![CI](https://github.com/deusbr/meshforge-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/meshforge-mcp/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/meshforge-mcp?color=2563eb&label=release)](https://github.com/deusbr/meshforge-mcp/releases) |
+| [**`lumina-a55-studio`**](https://github.com/deusbr/lumina-a55-studio#readme) | Native Android computational-photography camera crafted for Galaxy A55 (`CameraX` + `Camera2` + Multi-Frame YUV HDR+ burst + offline ML Kit concept engine + GPU `AGSL` editorial shaders) | `Kotlin` · `Jetpack Compose` · `CameraX` · `AGSL` · `MIT` | [![CI](https://github.com/deusbr/lumina-a55-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lumina-a55-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lumina-a55-studio?color=2563eb&label=release)](https://github.com/deusbr/lumina-a55-studio/releases) |
 | [**`ai-photo-studio`**](https://github.com/deusbr/ai-photo-studio#readme) | 8-agent Essence-Driven AI photo studio (`v4`: hybrid craft research, posing geometry, cinema/trailer & beauty presets, optical filters, editorial makeup, 5 prompt engines & Anti-AI QA) | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `HTTP` · `MIT` | [![CI](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/ai-photo-studio/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/ai-photo-studio?color=2563eb&label=release)](https://github.com/deusbr/ai-photo-studio/releases) |
 | [**`lume`**](https://github.com/deusbr/lume#readme) | Open-source Windows desktop AI assistant with bidirectional MCP (`@modelcontextprotocol/client`), local `Whisper` CPU transcription, `llama.cpp` GGUF inference, SQLite memory & Ed25519 updates | `Electron` · `Node.js 24` · `MCP` · `SQLite` · `MIT` | [![CI](https://github.com/deusbr/lume/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/lume/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/lume?color=2563eb&label=release)](https://github.com/deusbr/lume/releases) |
 
@@ -70,6 +72,8 @@ flowchart LR
   PortForge["port-forge (PC / Xbox 360 → Android NDK/SDL2/Winlator)"]
   McpStudio["mcp-studio (OpenAPI / CLI / Windows COM → MCP)"]
   UiCraft["ui-craft-studio (Codebase-First Anti-Slop UI/UX + DESIGN.md)"]
+  MeshForge["meshforge-mcp (Zero-Key SDF / EDT 3D GLB + MCP)"]
+  LuminaA55["lumina-a55-studio (Galaxy A55 YUV Burst + AGSL Camera)"]
   PhotoStudio["ai-photo-studio v4 (Craft Research + 8-Agent Anti-AI QA)"]
   ContextSlim["context-slim (Token Compressor + 3-Tool MCP)"]
   Installer["mcp-client-installer (Atomic JSON/TOML + SHA-256)"]
@@ -81,6 +85,8 @@ flowchart LR
   PortForge -->|"Skill + MCP + Scaffolds"| Clients
   McpStudio -->|"generates & probes"| Clients
   UiCraft -->|"DESIGN.md + Interactive UI"| Clients
+  MeshForge -->|"GLB / 3D Scene + MCP"| Clients
+  LuminaA55 -->|"CameraX + AGSL Editorial Engine"| Clients
   PhotoStudio -->|"Skill + MCP stdio"| Clients
   ContextSlim -->|"compresses context"| Clients
   Installer -->|"writes & rolls back"| Clients
@@ -104,11 +110,11 @@ flowchart LR
 
 | Layer | Technologies |
 | :--- | :--- |
-| **Languages & Runtimes** | JavaScript (`Node.js 18–24`), TypeScript, Python |
+| **Languages & Runtimes** | JavaScript (`Node.js 18–24`), TypeScript, Kotlin, Python |
 | **AI & Agent Protocols** | Model Context Protocol (`stdio` JSON-RPC 2.0, `@modelcontextprotocol/client`), Agent Skills (`SKILL.md`), `llama.cpp` (GGUF), Ollama, `Whisper` |
-| **Applications & Data** | Electron, React, Vite, FastAPI, SQLite, Supabase / PostgreSQL |
+| **Applications & Mobile** | Electron, React, Jetpack Compose (`CameraX` / `Camera2` / `AGSL`), Vite, FastAPI, SQLite, Supabase / PostgreSQL |
 | **Porting & Native Targets** | Android NDK, CMake, SDL2, Vulkan / DXVK, Winlator / Box64, Capacitor, Buildozer |
-| **Quality & Delivery** | `node:test`, GitHub Actions CI/CD, Playwright, SemVer Releases, MIT Licensing |
+| **Quality & Delivery** | `node:test`, JUnit + Gradle CI, GitHub Actions CI/CD, Playwright, SemVer Releases, MIT Licensing |
 
 ---
 
