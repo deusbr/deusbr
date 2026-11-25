@@ -1,0 +1,32 @@
+name: Profile CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate Profile README links and analytics query
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const md = fs.readFileSync("README.md", "utf8");
+            if (md.includes("include_all_commits=true")) {
+              throw new Error("Do not set include_all_commits=true on github-readme-stats URL.");
+            }
+            if (!md.includes("show=reviews")) {
+              throw new Error("Expected show=reviews on github-readme-stats URL.");
+            }
+            if (!md.includes("github.com/deusbr/lumina-a55-studio")) {
+              throw new Error("Missing flagship repo link.");
+            }
+            console.log("Profile README validated cleanly:", md.length, "bytes");
+          '
