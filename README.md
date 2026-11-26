@@ -56,6 +56,7 @@
 
 | Project | Summary | Core Stack | CI & Release |
 | :--- | :--- | :--- | :--- |
+| [**`nexus-context`**](https://github.com/deusbr/nexus-context#readme) | Zero-dependency local context & evidence layer in Node.js 24+ (`node:sqlite` + FTS5) for deterministic token reduction, expandable evidence, and project-scoped agent memory via MCP `stdio` and CLI | `Node.js >=24` · `SQLite FTS5` · `MCP stdio` · `MIT` | [![CI](https://github.com/deusbr/nexus-context/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/nexus-context/actions/workflows/ci.yml) |
 | [**`context-slim`**](https://github.com/deusbr/context-slim#readme) | Zero-dependency universal token-saving compressor (CLI + ultra-lean 3-tool `stdio` MCP + `SKILL.md`) with hybrid `repomix`/`rtk` support for code, JSON, logs, CSV & directories | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `MIT` | [![CI](https://github.com/deusbr/context-slim/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/context-slim/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/context-slim?color=2563eb&label=release)](https://github.com/deusbr/context-slim/releases) |
 | [**`mcp-doctor`**](https://github.com/deusbr/mcp-doctor#readme) | Zero-dependency CLI, library, and portable `SKILL.md` auditing MCP configs across 7 clients (Claude Desktop, Claude Code, Cursor, Codex, Gemini CLI, Antigravity & VS Code) for broken paths, Windows wrappers, secret leaks, live handshakes & token bloat | `Node.js >=18` · `MCP stdio` · `SKILL.md` · `MIT` | [![CI](https://github.com/deusbr/mcp-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-doctor/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-doctor?color=2563eb&label=release)](https://github.com/deusbr/mcp-doctor/releases) |
 | [**`mcp-client-installer`**](https://github.com/deusbr/mcp-client-installer#readme) | Zero-dependency, SHA-256 drift-safe atomic MCP config installer and rollback library for JSON and TOML MCP clients | `Node.js >=18` · `JSON/TOML` · `SHA-256` · `MIT` | [![CI](https://github.com/deusbr/mcp-client-installer/actions/workflows/ci.yml/badge.svg)](https://github.com/deusbr/mcp-client-installer/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/deusbr/mcp-client-installer?color=2563eb&label=release)](https://github.com/deusbr/mcp-client-installer/releases) |
@@ -75,6 +76,7 @@ flowchart LR
   MeshForge["meshforge-mcp (Zero-Key SDF / EDT 3D GLB + MCP)"]
   LuminaA55["lumina-a55-studio (Galaxy A55 YUV Burst + AGSL Camera)"]
   PhotoStudio["ai-photo-studio v4 (Craft Research + 8-Agent Anti-AI QA)"]
+  NexusContext["nexus-context (SQLite FTS5 Evidence & Memory MCP)"]
   ContextSlim["context-slim (Token Compressor + 3-Tool MCP)"]
   Installer["mcp-client-installer (Atomic JSON/TOML + SHA-256)"]
   Doctor["mcp-doctor (Config, Handshake & Token Audit)"]
@@ -88,6 +90,7 @@ flowchart LR
   MeshForge -->|"GLB / 3D Scene + MCP"| Clients
   LuminaA55 -->|"CameraX + AGSL Editorial Engine"| Clients
   PhotoStudio -->|"Skill + MCP stdio"| Clients
+  NexusContext -->|"reduces tokens & stores memory"| Clients
   ContextSlim -->|"compresses context"| Clients
   Installer -->|"writes & rolls back"| Clients
   Doctor -->|"audits & probes"| Clients
